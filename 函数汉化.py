@@ -2,8 +2,8 @@
 
 from random import random
 
-def 评估(*表达式):
-    return eval(*表达式)
+def 评估(表达式, *参数):
+    return eval(表达式, *参数)
 
 def 显示(*参数):
     print(*参数)
@@ -22,6 +22,19 @@ def 数据范围(*参数):
 def 格式化输出(字符串, *参数):
     return 字符串.format(*参数)
 
-函数(甲, 乙):
-    return 甲+乙
-#显示(格式化输出("竞技分析开始, 共模拟{1}{0}局比赛", 3, 6))    
+def 无操作():
+    pass
+
+def 执行(*参数):
+    return exec(*参数)
+
+是, 真 = True, True
+否, 假 = False, False
+
+def 退出():
+    exit(0)
+
+def 有错误退出():
+    exit(1)
+
+
