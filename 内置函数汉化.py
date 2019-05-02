@@ -7,7 +7,7 @@
 最小值 = min
 最大值 = max
 求和 = sum
-指数值 = pow
+指数, 指数值 = pow, pow
 商和余数, 返回商和余数 = divmod, divmod
 舍入, 四舍五入 = round, round
 复数, 返回复数 = complex, complex
