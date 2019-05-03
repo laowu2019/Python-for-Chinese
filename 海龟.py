@@ -118,8 +118,8 @@ class 新海龟(Turtle):
         实例.end_poly()
     def 获取多边形(实例):
         实例.get_poly()
-    #def 克隆(实例):        # 汉化有问题, 不能用
-    #    实例.clone()
+    def 克隆(实例):        # 调用父类方法, 原问题已解决
+        return Turtle.clone(实例)
     def 获取海龟(实例):
         实例.getturtle()
     def 获取屏幕(实例):
@@ -261,7 +261,7 @@ y坐标 = ycor
 开始记录多边形 = begin_poly
 结束记录多边形 = end_poly
 获取多边形 = get_poly
-克隆 = clone # 汉化有问题
+克隆 = clone # 此方法克隆出的对象不支持汉化函数, 不要使用.
 获取海龟 = getturtle
 获取屏幕 = getscreen
 设置撤消缓冲区 = setundobuffer
