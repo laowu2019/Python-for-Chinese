@@ -70,9 +70,6 @@ U编码, 返回U编码 = ord, ord
 返回迭代器 = zip
 # __import__()
 
-def 格式化输出(字符串, *args, **kwargs):
-    return 字符串.format(*args, **kwargs)
-
 def 无操作():
     pass
 
