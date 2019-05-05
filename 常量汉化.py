@@ -9,6 +9,7 @@
 绿 = 'green'
 左 = 'left'
 右 = 'right'
+居中 = 'center'
 正常 = 'normal'
 斜体 = 'italic'
 粗体 = 'bold'

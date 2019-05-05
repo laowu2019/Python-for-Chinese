@@ -2,8 +2,7 @@
 import 海龟
 from 内置函数汉化 import *
 from 常量汉化 import *
-
-from datetime import *
+from 时间日期汉化 import *
  
 # 抬起画笔，向前运动一段距离放下
 def 跳过(步数):
@@ -61,54 +60,54 @@ def 设置时钟(半径):
            
             跳过(半径 + 20)
             if i == 0:
-                海龟.书写(int(12), align = "center", font = ("Courier", 14, "bold"))
+                海龟.书写(int(12), align = 居中, font = ("Courier", 14, 粗体))
             elif i == 30:
                 跳过(25)
-                海龟.书写(int(i/5), align = "center", font = ("Courier", 14, "bold"))
+                海龟.书写(int(i/5), align = 居中, font = ("Courier", 14, 粗体))
                 跳过(-25)
             elif (i == 25 or i == 35):
                 跳过(20)
-                海龟.书写(int(i/5), align = "center", font = ("Courier", 14, "bold"))
+                海龟.书写(int(i/5), align = 居中, font = ("Courier", 14, 粗体))
                 跳过(-20)
             else:
-                海龟.书写(int(i/5), align = "center", font = ("Courier", 14, "bold"))
+                海龟.书写(int(i/5), align = 居中, font = ("Courier", 14, 粗体))
             跳过(-半径 - 20)
         else:
             海龟.画点(5)
             跳过(-半径)
         海龟.右转(6)
         
-def 一周(时间):   
+def 一周(第几天):   
     一周 = ["星期一", "星期二", "星期三",
             "星期四", "星期五", "星期六", "星期日"]
-    return 一周[时间.weekday()]
+    return 一周[第几天]
  
-def 日期(时间):
-    年 = 时间.year
-    月 = 时间.month
-    日 = 时间.day
+def 日期():
+    年 = 当前年份() #时间.year
+    月 = 当前月份() #时间.month
+    日 = 当前日子() #时间.day
     return "%s %d %d" % (年, 月, 日)
  
 def 滴答():
-    # 绘制表针的动态显示
-    时间 = datetime.today()
-    秒 = 时间.second + 时间.microsecond * 0.000001
-    分 = 时间.minute + 秒 / 60.0
-    时 = 时间.hour + 分 / 60.0
+    # 绘制表针的动态显示, 用datetime库实现的话, 秒钟运动更平滑
+    #时间 = datetime.datetime.today()
+    秒 = 当前秒数() #时间.second + 时间.microsecond * 0.000001
+    分 = 当前分钟() #时间.minute + 秒 / 60.0
+    时 = 当前小时() #时间.hour + 分 / 60.0
     秒针.设置朝向(6 * 秒)
     分针.设置朝向(6 * 分)
     时针.设置朝向(30 * 时)
     
     海龟.轨迹(否) 
     打印器.前进(65)
-    打印器.书写(一周(时间), 对齐 = "center", 字体 = ("Courier", 14, "bold"))
+    打印器.书写(一周(当前周日()), 对齐 = 居中, 字体 = ("Courier", 14, 粗体))
     打印器.后退(130)
-    打印器.书写(日期(时间), 对齐 = "center", 字体 = ("Courier", 14, "bold"))
+    打印器.书写(日期(), 对齐 = 居中, 字体 = ("Courier", 14, 粗体))
     打印器.返回原点()
     海龟.轨迹(是)
  
     # 100ms后继续调用tick
-    海龟.当达到定时(滴答, 100)
+    海龟.当达到定时(滴答, 1000)
  
 def 主函数():
     # 打开/关闭龟动画，并为更新图纸设置延迟。
