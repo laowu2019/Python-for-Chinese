@@ -9,7 +9,7 @@
 9.	返回：		return
 10.	类：		class
 11.	从：		from
-12.	导入：	  import
+12.	导入：	    import
 13.	以：		with
 14.	为：		as
 15.	取：		for
@@ -18,11 +18,11 @@
 18.	不然：		elif
 19.	否则：		else
 20.	只要：		while
-21.	过：	  continue
+21.	过：	    continue
 22.	中断：		break
 23.	尝试：		try
 24.	捕获：		except
-25.	示警：	  raise
+25.	示警：	    raise
 26.	最后：		finally
 27.	断言：		assert
 28.	删除：		del
