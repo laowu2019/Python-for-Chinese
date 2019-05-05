@@ -39,17 +39,17 @@ class 新海龟(Turtle):
     def 速度(实例, 速度 = 空):
         实例.speed(速度)
     def 位置(实例):
-        实例.position()
+        return 实例.position()
     def 目标方向(实例, x, y = 空):
-        实例.towards(x, y)
+        return 实例.towards(x, y)
     def x坐标(实例):
-        实例.xcor()
+        return 实例.xcor()
     def y坐标(实例):
-        实例.ycor()
+        return 实例.ycor()
     def 朝向(实例):
-        实例.heading()
+        return 实例.heading()
     def 距离(实例, x, y = 空):
-        实例.distance(x, y)
+        return 实例.distance(x, y)
     def 设置圆度数(实例, 圆度数):
         实例.degrees(圆度数)
     def 弧度(实例):
@@ -61,17 +61,17 @@ class 新海龟(Turtle):
     def 画笔粗细(实例, 粗细 = 空):
         实例.pensize()
     def 画笔(实例, 画笔 = 空, **画笔字典):
-        实例.pen(画笔, **画笔字典)
+        return 实例.pen(画笔, **画笔字典)
     def 画笔是否落下(实例):
-        实例.isdown()
+        return 实例.isdown()
     def 颜色(实例, *参数):
-        实例.color(*参数)
+        return 实例.color(*参数)
     def 画笔颜色(实例, *参数):
-        实例.pencolor(*参数)
+        return 实例.pencolor(*参数)
     def 填充颜色(实例, *参数):
-        实例.fillcolor(*参数)
+        return 实例.fillcolor(*参数)
     def 是否填充(实例):
-        实例.filling()
+        return 实例.filling()
     def 开始填充(实例):
         实例.begin_fill()
     def 结束填充(实例):
@@ -87,25 +87,25 @@ class 新海龟(Turtle):
     def 隐藏海龟(实例):
         实例.hideturtle()
     def 是否可见(实例):
-        实例.isvisible()
+        return 实例.isvisible()
     def 形状(实例, 形状名称 = 空):
         实例.shape(形状名称)
     def 大小调整模式(实例, 调整模式 = 空):
         实例.resizemode(调整模式)
     def 形状大小(实例, 宽度伸缩因子 = 空, 长度伸缩因子 = 空, 轮廓宽度 = 空):
-        实例.shapesize(宽度伸缩因子, 长度伸缩因子, 轮廓宽度)
+        return 实例.shapesize(宽度伸缩因子, 长度伸缩因子, 轮廓宽度)
     def 剪切因子(实例, 剪切因子 = 空):
-        实例.shearfactor(剪切因子)
+        return 实例.shearfactor(剪切因子)
     def 设置倾角(实例, 倾角):
         实例.settiltangle(倾角)
     def 倾角(实例, 倾角 = 空):
-        实例.tiltangle(倾角)
+        return 实例.tiltangle(倾角)
     def 倾斜(实例, 角度):
         实例.tilt(角度)
     def 变形(实例, t11 = 空, t12 = 空, t21 = 空, t22 = 空):
-        实例.shapetransform(t11, t12, t21, t22)
+        return 实例.shapetransform(t11, t12, t21, t22)
     def 获取形状多边形(实例):
-        实例.get_shapepoly()
+        return 实例.get_shapepoly()
     def 当点击鼠标(实例, 函数, 鼠标键 = 1, 增加 = 空):
         实例.onclick(函数, 鼠标键, 增加)
     def 当释放鼠标(实例, 函数, 鼠标键 = 1, 增加 = 空):
@@ -117,17 +117,17 @@ class 新海龟(Turtle):
     def 结束记录多边形(实例):
         实例.end_poly()
     def 获取多边形(实例):
-        实例.get_poly()
+        return 实例.get_poly()
     def 克隆(实例):        # 调用父类方法, 原问题已解决
         return Turtle.clone(实例)
     def 获取海龟(实例):
-        实例.getturtle()
+        return 实例.getturtle()
     def 获取屏幕(实例):
-        实例.getscreen()
+        return 实例.getscreen()
     def 设置撤消缓冲区(实例, 大小):
         实例.setundobuffer(大小)
     def 撤消缓冲区条目数(实例):
-        实例.undobufferentries()
+        return 实例.undobufferentries()
     """ def 背景颜色(实例):
         实例.bgcolor()
     def 背景图片(实例):

@@ -12,5 +12,6 @@
 正常 = 'normal'
 斜体 = 'italic'
 粗体 = 'bold'
+方形 = 'square'
 是, 真 = True, True
 否, 假 = False, False
