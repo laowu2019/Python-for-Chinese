@@ -11,7 +11,7 @@
 商和余数, 返回商和余数 = divmod, divmod
 舍入, 四舍五入 = round, round
 复数, 返回复数 = complex, complex
-布尔值, 返回布尔值 = bool, bool
+零一, 布尔值, 返回布尔值 = bool, bool
 整数, 返回整数 = int, int
 字符串, 返回字符串 = str, str
 浮点数, 返回浮点数 = float, float
@@ -45,30 +45,30 @@ U编码, 返回U编码 = ord, ord
 获取属性 = getattr
 设置属性 = setattr
 是否存在属性 = hasattr
-返回属性名称列表 = dir
+属性名称列表, 返回属性名称列表 = dir
 帮助 = help
 过滤器 = filter
-迭代器, 返回迭代对象 = iter, iter
+迭代对象, 返回迭代对象 = iter, iter
 下一个 = next
 哈希值, 返回哈希值 = hash, hash
 标识, 返回标识值 = id, id
-是否为实例 = isinstance
-是否为子类 = issubclass
-返回对象 = object
+是否实例, 是否为实例 = isinstance
+是否子类, 是否为子类 = issubclass
+对象, 返回对象 = object
 静态方法 = staticmethod
 类方法 = classmethod
 内存视图 = memoryview
 类型, 返回类型 = type, type
-返回切片对象 = slice
+切片, 返回切片对象 = slice
 超类, 返回超类 = super, super
 属性, 返回属性 = property, property
-返回冻结集合 = frozenset
-返回对象字典属性 = vars
-返回局部符号字典 = locals
-返回全局符号字典 = globals
-返回可打印字符串 = repr
-返回迭代器 = zip
-# __import__()
+冻结集合, 返回冻结集合 = frozenset
+对象字典属性, 返回对象字典属性 = vars
+局部符号字典, 返回局部符号字典 = locals
+全局符号字典, 返回全局符号字典 = globals
+可打印字符串, 返回可打印字符串 = repr
+迭代器, 返回迭代器 = zip
+__导入__ = __import__
 
 def 无操作():
     pass
