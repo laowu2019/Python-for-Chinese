@@ -18,7 +18,7 @@ print('<' + '你好'.居中() + '>') """
 from 内置函数汉化 import *
 from 常量汉化 import *
 
-def 格式化(字符串, *args, **kwargs):
+def 格式化(字符串, *args, **kwargs): # 内置函数已有此功能，不需要？
     return 字符串.format(*args, **kwargs)
 
 def 居中(字符串, 宽度, 填充字符 = ' '):
