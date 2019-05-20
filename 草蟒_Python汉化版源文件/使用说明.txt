@@ -1,7 +1,16 @@
 ### 本文件夹包含 Python 汉化版源文件。
 * Python 版本为 3.7.3, 其余版本未测试，不保证能正常使用。
-* 下载本文件夹中的四个 py 文件之后，复制到 Python 安装路径的 lib/idlelib 目录下覆盖原文件。
-* 正常打开 Python IDLE 即可使用。中文关键词和内置函数名称（未定稿）如下。相关教程稍后陆续发布。
+* 汉化包.py 下载后放置在安装路径的 lib 目录下。
+* colerizer/pyshell/runscript 这三个 py 文件用于支持 IDLE 全中文化编程，
+  下载后复制到 Python 安装路径的 lib/idlelib 目录下，覆盖原文件，然后正常打开 Python IDLE 即可使用。
+* 运行中文程序.py 下载后放到你的工作目录下，用于支持 VS Code 环境。在 VS Code 中除安装 Python 插件外，
+  还要安装 Code Runner。打开工作目录后，点击左下角的“设置”，在搜索框中输入 code runner: Custom Command，
+  然后在其下方的文本框中将 echo Hello 更改为：python 你的工作目录\运行中文程序.py $fullFileName。
+  编好中文程序后，在当前文件编辑器中按 Ctrl+Alt+K 键即可运行。（当然，如果是英文编程，没必要按这三个键，还是按 F5）
+* VS Code环境的中文关键词和内置函数名的颜色显示有待完善。
+* 近期将陆续发布一些有趣的示例。
+* 中文关键词和内置函数名称（未定稿）如下。
+* 
 * 中文关键词：
 假':'False
 空':'None
@@ -15,7 +24,7 @@
 类':'class
 从':'from
 导入':'import
-以':'with
+用':'with
 为':'as
 取':'for
 在':'in
