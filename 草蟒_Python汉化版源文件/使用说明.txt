@@ -1,13 +1,18 @@
-### 本文件夹包含 Python 汉化版源文件。
+﻿### 本文件夹包含 Python 汉化版源文件。
 * Python 版本为 3.7.3, 其余版本未测试，不保证能正常使用。
 * 汉化包.py 下载后放置在安装路径的 lib 目录下。
-* colerizer/pyshell/runscript 这三个 py 文件用于支持 IDLE 全中文化编程，
+* idlelib 文件夹中的 colerizer/pyshell/runscript 这三个 py 文件用于支持 IDLE 全中文化编程，
   下载后复制到 Python 安装路径的 lib/idlelib 目录下，覆盖原文件，然后正常打开 Python IDLE 即可使用。
 * 运行中文程序.py 下载后放到你的工作目录下，用于支持 VS Code 环境。在 VS Code 中除安装 Python 插件外，
   还要安装 Code Runner。打开工作目录后，点击左下角的“设置”，在搜索框中输入 code runner: Custom Command，
   然后在其下方的文本框中将 echo Hello 更改为：python 你的工作目录\运行中文程序.py $fullFileName。
   编好中文程序后，在当前文件编辑器中按 Ctrl+Alt+K 键即可运行。（当然，如果是英文编程，没必要按这三个键，还是按 F5）
-* VS Code环境的中文关键词和内置函数名的颜色显示有待完善。
+* VS Code环境的中文关键词和内置函数名的颜色显示以及缩进已经可用，方法如下：
+  将 vscode 文件夹中的 extension.js 文件下载后覆盖 ms-pathon 插件安装目录下的相应文件，比如在我的电脑中该文件位于：
+  C:\Users\Administrator\.vscode\extensions\ms-python.python-2019.4.12954\out\client 目录中。
+  将 vscode 文件夹中的 MagicPython.tmLanguage.json 文件下载后覆盖 vs code 安装目录下的相应文件，在我的电脑中该文件位于：
+  C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\python\syntaxes 目录中。
+* 推荐使用 VS Code，建议下载其简体中文包，在其插件界面中输入“chinese”就会跳出来，选中安装。
 * 近期将陆续发布一些有趣的示例。
 * 中文关键词和内置函数名称（未定稿）如下。
 * 
@@ -51,7 +56,7 @@
 不是':'is not
 
 * 内置函数名：
-显示':'print
+输出':'print
 输入':'input
 求值':'eval
 绝对值':'abs
@@ -75,8 +80,8 @@
 八进制':'oct
 十六进制':'hex
 字符':'chr
-U编码':'ord
-返回ASCII':'ascii
+U码':'ord
+ascii 中英文相同
 字节数组':'bytearray
 字节':'bytes
 枚举':'enumerate
@@ -91,17 +96,17 @@ U编码':'ord
 执行':'exec
 编译':'compile
 断点':'breakpoint
-是否可调用':'callable
+可否调用':'callable
 删除属性':'delattr
 获取属性':'getattr
 设置属性':'setattr
 是否存在属性':'hasattr
-名称列表':'dir
+名录':'dir
 帮助':'help
 过滤器':'filter
 迭代对象':'iter
 下一个':'next
-哈希值':'hash
+哈希':'hash
 标识':'id
 是否实例':'isinstance
 是否子类':'issubclass
@@ -117,7 +122,7 @@ U编码':'ord
 对象字典属性':'vars
 局部符号字典':'locals
 全局符号字典':'globals
-可打印字符串':'repr
+可显字符':'repr
 迭代器':'zip
 __导入__':'__import__
 退出':'exit
