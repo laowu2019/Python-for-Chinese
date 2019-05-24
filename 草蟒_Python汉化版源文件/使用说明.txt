@@ -13,6 +13,8 @@
   将 vscode 文件夹中的 MagicPython.tmLanguage.json 文件下载后覆盖 vs code 安装目录下的相应文件，在我的电脑中该文件位于：
   C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\python\syntaxes 目录中。
 * 推荐使用 VS Code，建议下载其简体中文包，在其插件界面中输入“chinese”就会跳出来，选中安装。
+* 将 vscode 文件夹中的 pythonMain.js 文件复制到 vs code 安装目录下相应地方, 比如在我的电脑中该文件位于：
+  C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\python\out , 然后禁用 ms-python 插件, 使用 vs   code 自带最简版本 (无智能提示功能), 就不会对中文关键词等显示恼人的警示波浪线了.
 * 近期将陆续发布一些有趣的示例。
 * 中文关键词和内置函数名称（未定稿）如下。
 * 
