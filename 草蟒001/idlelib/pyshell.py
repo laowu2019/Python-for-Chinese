@@ -497,7 +497,7 @@ class ModifiedInterpreter(InteractiveInterpreter):
         console.stop_readline()
         # annotate restart in shell window and mark it
         console.text.delete("iomark", "end-1c")
-        tag = 'RESTART: ' + (filename if filename else 'Shell')
+        tag = '重启: ' + (filename if filename else 'Shell')
         halfbar = ((int(console.width) -len(tag) - 4) // 2) * '='
         console.write("\n{0} {1} {0}".format(halfbar, tag))
         console.text.mark_set("restart", "end-1c")
@@ -872,12 +872,12 @@ class PyShell(OutputWindow):
 
     # Override menus
     menu_specs = [
-        ("file", "_File"),
-        ("edit", "_Edit"),
-        ("debug", "_Debug"),
-        ("options", "_Options"),
-        ("window", "_Window"),
-        ("help", "_Help"),
+        ("file", "文件"),
+        ("edit", "编辑"),
+        ("debug", "调试"),
+        ("options", "选项"),
+        ("window", "窗口"),
+        ("help", "帮助"),
     ]
 
     # Extend right-click context menu
@@ -1064,7 +1064,7 @@ class PyShell(OutputWindow):
         return self.shell_title
 
     COPYRIGHT = \
-          'Type "help", "copyright", "credits" or "license()" for more information.'
+          '键入 "帮助", "copyright", "credits" 或 "license()" 可了解更多信息。'
 
     def begin(self):
         self.text.mark_set("iomark", "insert")
