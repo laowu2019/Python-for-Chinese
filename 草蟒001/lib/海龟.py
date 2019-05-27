@@ -1,25 +1,5 @@
 from turtle import *
 
-自动 = 'auto'
-用户 = 'user'
-不调整 = 'noresize'
-红 = 'red'
-黄 = 'yellow'
-蓝 = 'blue'
-黑 = 'black'
-白 = 'white'
-绿 = 'green'
-左 = 'left'
-右 = 'right'
-居中 = 'center'
-正常 = 'normal'
-斜体 = 'italic'
-粗体 = 'bold'
-方形 = 'square'
-点 = 'dot'
-假 = False
-真 = True
-
 class 新海龟(Turtle):
     def 前进(自己, 距离):
         自己.forward(距离)
@@ -95,7 +75,7 @@ class 新海龟(Turtle):
         自己.reset()
     def 清None(自己):
         自己.clear()
-    def 书写(自己, 信息, 是否移动 = 假, 对齐 = 左, 字体 = ("Arial", 8, 正常)):
+    def 书写(自己, 信息, 是否移动 = False, 对齐 = 'left', 字体 = ("Arial", 8, 'normal')):
         自己.write(信息, 是否移动, 对齐, 字体)
     def 显示海龟(自己):
         自己.showturtle()
