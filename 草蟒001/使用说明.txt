@@ -124,7 +124,7 @@ ascii 中英文相同
 对象属性字典':'vars
 局部变量字典':'locals
 全局变量字典':'globals
-可显字符':'repr
+原样输出':'repr
 打包':'zip
 __导入__':'__import__
 退出':'exit
