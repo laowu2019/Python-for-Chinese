@@ -18,7 +18,7 @@ import os
     '迭代':'iter', '下一个':'next', '哈希':'hash', '标识':'id', '是否实例':'isinstance', '是否子类':'issubclass', \
     '对象':'object', '静态方法':'staticmethod', '类方法':'classmethod', '内存视图':'memoryview', '类型':'type', \
     '切片':'slice', '超类':'super', '属性':'property', '冻结集合':'frozenset', '对象属性字典':'vars', \
-    '局部变量字典':'locals', '全局变量字典':'globals', '可显字符':'repr', '打包':'zip', '__导入__':'__import__', \
+    '局部变量字典':'locals', '全局变量字典':'globals', '原样输出':'repr', '打包':'zip', '__导入__':'__import__', \
     '退出':'exit'}  # ascii 中英文相同
 
 其他名称字典 = {'自己':'self', '本类':'cls', '__初始化__':'__init__', '字体':'font', '__名称__':'__name__', \
