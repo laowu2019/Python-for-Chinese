@@ -73,7 +73,7 @@ class 新海龟(Turtle):
         自己.end_fill()
     def 重置(自己):
         自己.reset()
-    def 清None(自己):
+    def 清屏(自己):
         自己.clear()
     def 书写(自己, 信息, 是否移动 = False, 对齐 = 'left', 字体 = ("Arial", 8, 'normal')):
         自己.write(信息, 是否移动, 对齐, 字体)
@@ -171,8 +171,8 @@ y坐标 = ycor
 结束填充 = end_fill
 #   更多绘图控制
 重置 = reset
-清None = clear
-书写 = write #内部形参无法汉化?
+清屏 = clear
+书写 = write 
 
 
 # 海龟状态
@@ -216,7 +216,8 @@ y坐标 = ycor
 设置世界坐标系 = setworldcoordinates
 #   动画控制
 延迟 = delay
-轨迹 = tracer
+显示操作过程 = tracer
+示踪 = tracer
 更新 = update 
 #   使用屏幕事件
 监听 = listen
