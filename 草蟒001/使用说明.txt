@@ -60,7 +60,7 @@
 * 内置函数名：
 输出':'print
 输入':'input
-求值':'eval
+评估':'eval
 绝对值':'abs
 最大值':'max
 最小值':'min

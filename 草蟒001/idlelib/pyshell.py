@@ -864,7 +864,7 @@ class ModifiedInterpreter(InteractiveInterpreter):
 
 class PyShell(OutputWindow):
 
-    shell_title = "Python " + python_version() + " Shell"
+    shell_title = "草蟒 " + python_version() + " Shell"
 
     # Override classes
     ColorDelegator = ModifiedColorDelegator

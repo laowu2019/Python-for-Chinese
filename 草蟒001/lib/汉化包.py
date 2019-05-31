@@ -7,7 +7,7 @@ import os
                 '删除':'del', '全局':'global', '非局部':'nonlocal', '雷锋':'lambda', '无操作':'pass', \
                     '生成':'yield', '异步':'async', '等待':'await', '不在':'not in', '不是':'is not'}
 
-内置函数字典 = {'输出':'print', '输入':'input', '求值':'eval', '绝对值':'abs', '最大值':'max', '最小值':'min', \
+内置函数字典 = {'输出':'print', '输入':'input', '评估':'eval', '绝对值':'abs', '最大值':'max', '最小值':'min', \
     '求和':'sum', '指数':'pow', '商和余数':'divmod', '舍入':'round', '复数':'complex', '布尔':'bool', '整数':'int', \
     '字符串':'str', '浮点数':'float', '元组':'tuple', '列表':'list', '字典':'dict', '集合':'set', '长度':'len', \
     '二进制':'bin', '八进制':'oct', '十六进制':'hex', '字符':'chr', 'U码':'ord', \
@@ -18,7 +18,7 @@ import os
     '迭代':'iter', '下一个':'next', '哈希':'hash', '标识':'id', '是否实例':'isinstance', '是否子类':'issubclass', \
     '对象':'object', '静态方法':'staticmethod', '类方法':'classmethod', '内存视图':'memoryview', '类型':'type', \
     '切片':'slice', '超类':'super', '属性':'property', '冻结集合':'frozenset', '对象属性字典':'vars', \
-    '局部变量字典':'locals', '全局变量字典':'globals', '可显字符':'repr', '打包':'zip', '__导入__':'__import__', \
+    '局部变量字典':'locals', '全局变量字典':'globals', '原样输出':'repr', '打包':'zip', '__导入__':'__import__', \
     '退出':'exit'}  # ascii 中英文相同
 
 其他名称字典 = {'自己':'self', '本类':'cls', '__初始化__':'__init__', '字体':'font', '__名称__':'__name__', \
