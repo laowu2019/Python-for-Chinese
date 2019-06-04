@@ -23,15 +23,18 @@ import os
 
 其他名称字典 = {'自己':'self', '本类':'cls', '__初始化__':'__init__', '字体':'font', '__名称__':'__name__', \
     '追加':'append', '清空':'clear', '复制':'copy', '统计':'count', '扩展':'extend', '索引':'index', \
-    '插入':'insert', '弹出':'pop', '移除':'remove', '列表反转':'reverse', '列表排序':'sort', '从键创建':'fromkeys', \
-    '获取值':'get', '字典项':'items', '字典键':'keys', '弹出末项':'popitem', '设置默认值':'setdefault', \
-    '字典值':'values', '更新':'update', '居中':'center', '查找':'find', '连接':'join', '分割':'split', \
-    '小写':'lower', '大写':'upper', '替换':'replace', '去空格':'strip'}
+    '插入':'insert', '弹出':'pop', '移除':'remove', '列表反转':'reverse', '列表排序':'sort', \
+    '从键创建':'fromkeys', '获取':'get', '字典项':'items', '字典键':'keys', '弹出项':'popitem', \
+    '设置默认值':'setdefault', '字典值':'values', '更新':'update', '居中':'center', '查找':'find', \
+    '连接':'join', '分割':'split', '小写':'lower', '大写':'upper', '替换':'replace', '去字符':'strip', \
+    '结束':'end', '增加':'add', '丢弃':'discard', '关闭':'close', '读取':'read', '写入':'write', \
+    '读取一行':'readline', '读取多行':'readlines', '写入行':'writelines', '文件指针':'seek'}
 
 # 规定除"__主函数__"外，其余常量一律用单引号，否则不能匹配。
 常量字典 = {"'红'":"'red'", "'黄'":"'yellow'", "'蓝'":"'blue'", "'黑'":"'black'", "'白'":"'white'", \
-    "'绿'":"'green'", "'左'":"'left'", "'右'":"'right'", "'居中'":"'center'", "'正常'":"'normal'", \
-    "'斜体'":"'italic'", "'粗体'":"'bold'", "'方形'":"'square'", "'点'":"'dot'", '"__主函数__"':'"__main__"'}
+    "'绿'":"'green'", "'紫'":"'purple'", "'左'":"'left'", "'右'":"'right'", "'居中'":"'center'", \
+    "'正常'":"'normal'", "'斜体'":"'italic'", "'粗体'":"'bold'", "'方形'":"'square'", "'点'":"'dot'", \
+    '"__主函数__"':'"__main__"'}
 
 名称字典大全 = dict(关键词字典, **内置函数字典)
 名称字典大全.update(其他名称字典)

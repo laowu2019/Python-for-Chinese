@@ -1,5 +1,8 @@
 from random import *
 
+# 种子(n), 产生n对应的随机数序列，n默认为当前系统时间
+种子 = seed
+
 # 随机数(), 0 - 1, 含 0 不含 1
 随机数 = random
 
@@ -19,3 +22,5 @@ from random import *
 # 随机打乱(序列), 返回空, 直接修改原序列
 随机打乱 = shuffle
 
+# 随机比特数(K), 生成一个k比特长的随机整数
+随机比特数 = getrandbits
