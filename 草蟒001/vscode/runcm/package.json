@@ -1,0 +1,54 @@
+{
+	"name": "运行草蟒程序",
+	"description": "运行Python汉化版草蟒中文编程语言程序",
+	"version": "0.0.1",
+	"publisher": "草蟒老吴",
+	"icon": "",
+	"repository": "",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"activationEvents": [
+		"onLanguage:python",
+		"onCommand:extension.runcm"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.runcm",
+				"title": "运行草蟒程序"
+			}
+		],
+		"keybindings":[
+			{
+				"command": "extension.runcm",
+				"key": "ctrl+F10",
+				"when": "editorTextFocus"
+			}
+		],
+		"menus": {"editor/context": [
+			{
+			"when": "editorFocus",
+			"command": "extension.runcm",
+			"group": "navigation"
+			}
+		]},
+		"configuration":{
+			"type": "object",
+			"title": "运行草蟒程序入口配置",
+			"properties": {
+				"运行草蟒程序.entryPath":{
+          			"type": "string",
+          			"default": "e:\\草蟒工作室\\运行草蟒程序.py",
+          			"description": "设置草蟒程序运行入口。",
+          			"scope": "resource"
+				}
+			}
+		}
+	},
+	"scripts": {},
+	"devDependencies": {
+		"@types/vscode": "^1.32.0"
+	}
+}
