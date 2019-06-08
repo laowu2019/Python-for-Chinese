@@ -65,6 +65,7 @@ def 替换中文名称(source, script = 1): # script: 脚本需解码, 命令行
             tokenlist.append((tokentype, tokenstring, tokenbegin, tokenend, tokenline))
     return tokenize.untokenize(tokenlist)
 
+'''
 def 查找匹配英文文件(资源名, 资源绝对路径, 资源所在目录):
     import glob
 
@@ -115,6 +116,48 @@ def 导入中文资源(资源名, 资源所在目录 = None):
     #module = importlib.util.module_from_spec(spec)
     #return spec.loader.exec_module(module)
     #以上方法似乎更困难.
+'''
+
+def 查找匹配英文文件(资源名, 资源绝对路径):
+    import glob
+
+    英文文件名 = 资源名[:-3] + '_英.py'
+    草蟒缓存路径 = '.\\__草蟒缓存__'
+    英文名路径 = 草蟒缓存路径 + '\\' + 英文文件名
+    if not os.path.exists(草蟒缓存路径):
+        os.makedirs(草蟒缓存路径)
+        fp = open(草蟒缓存路径 + "\\__init__.py", 'w')
+        fp.close()
+    #print(glob.glob(草蟒缓存路径 + '\\*'))
+    if 英文名路径 in glob.glob(草蟒缓存路径 + '\\*'):
+        中文文件状态 = os.stat(资源绝对路径)
+        #print(中文文件状态.st_mtime)
+        英文文件状态 = os.stat(英文名路径)
+        #print(英文文件状态.st_mtime)
+        if 英文文件状态.st_mtime >= 中文文件状态.st_mtime:
+            return True
+    else:
+        return False
+
+def 导入中文资源(资源名, 资源所在目录 = None):
+	# .py 形式的资源名 (例如 '某种资源.py') 为必填参数, 资源所在目录为选填参数.
+	# 将资源回译为英文, 文件名改为 *_英.py, 然后放在发起导入的文件所在路径的 .\\__草蟒缓存__\\ 目录下面.
+    import importlib
+    #import sys
+
+    if 资源所在目录 is None:
+        资源绝对路径 = os.path.abspath(资源名)
+        #资源所在目录 = os.path.dirname(资源绝对路径)
+    else:
+        资源绝对路径 = 资源所在目录 + '\\' + 资源名
+    if not 查找匹配英文文件(资源名, 资源绝对路径):
+        with open(资源绝对路径, 'rb') as f:
+            s = f.read()
+            source = 替换中文名称(s)
+        with open('.\\__草蟒缓存__\\' + 资源名[:-3] + '_英.py', 'w', encoding='UTF-8') as fe:
+            fe.write(source)
+    return importlib.import_module('__草蟒缓存__.' + 资源名[:-3] + '_英')
+
 
 
 def 代码回译(文件名):
